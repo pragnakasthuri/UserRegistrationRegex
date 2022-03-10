@@ -6,6 +6,8 @@ import java.util.regex.Pattern;
 /**
  * As a User need to enter a valid FirstName
  * First name starts with Cap and has minimum 3 characters
+ * As a User need to enter a valid Lastname
+ * Last name starts with Cap and has minimum 3 characters
  */
 
 public class UserInputValidationUtil {
@@ -28,6 +30,31 @@ public class UserInputValidationUtil {
          * Checking fot the pattern match
          */
         Matcher matcher = pattern.matcher(firstName);
+        /**
+         * Returns matches result
+         */
+        return matcher.matches();
+    }
+
+    /**
+     * Creating isValidLastName to validate the last name given by user using regex
+     *
+     * @param lastName - Taking the input given by user
+     * @return - true or false
+     */
+    public static boolean isValidLastName(String lastName) {
+        /**
+         * Declaring regex pattern to check the lastName
+         */
+        String firstNameRegex = "[A-Z]{1}[a-z]{2,}";
+        /**
+         * Compiling the regex
+         */
+        Pattern pattern = Pattern.compile(firstNameRegex);
+        /**
+         * Checking fot the pattern match
+         */
+        Matcher matcher = pattern.matcher(lastName);
         /**
          * Returns matches result
          */
