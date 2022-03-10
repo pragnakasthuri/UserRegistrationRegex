@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
  * First name starts with Cap and has minimum 3 characters
  * As a User need to enter a valid Lastname
  * Last name starts with Cap and has minimum 3 characters
+ * User need to enter a valid email
  */
 
 public class UserInputValidationUtil {
@@ -55,6 +56,32 @@ public class UserInputValidationUtil {
          * Checking fot the pattern match
          */
         Matcher matcher = pattern.matcher(lastName);
+        /**
+         * Returns matches result
+         */
+        return matcher.matches();
+    }
+    /**
+     * Creating isValidEmail to validate the email given by user using regex
+     *
+     * @param email - Taking the input given by user
+     * @return - true or false
+     */
+    public static boolean isValidEmail(String email) {
+        /**
+         * Declaring regex pattern to check the email
+         */
+        String firstNameRegex = "^[a-zA-Z0-9_+-]+(?:\\.[a-zA-Z0-9_+-]+)*@" +
+                                "([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}" +
+                                "(?:(\\.([A-Za-z]{2})))?$";
+        /**
+         * Compiling the regex
+         */
+        Pattern pattern = Pattern.compile(firstNameRegex);
+        /**
+         * Checking fot the pattern match
+         */
+        Matcher matcher = pattern.matcher(email);
         /**
          * Returns matches result
          */
