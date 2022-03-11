@@ -12,6 +12,8 @@ import java.util.Scanner;
  * Last name starts with Cap and has minimum 3 characters
  * User need to enter a valid email
  * User need to follow pre-defined mobile format
+ * User need to follow pre-defined password rules
+ * 1.minimum 8 characters
  */
 
 public class UserRegistration {
@@ -35,7 +37,9 @@ public class UserRegistration {
          * 8.Printing Valid if given email is valid , Invalid otherwise
          * 9.Taking input from user and storing it in mobileNumber
          * 10.Printing Valid if given mobile number is valid , Invalid otherwise
-         * 11.Closing the BufferedReader object
+         * 11.Taking input from user and storing it in password
+         * 12.Printing Valid if given password is valid , Invalid otherwise
+         * 13.Closing the bufferedReader object
          */
 
         /**
@@ -51,7 +55,7 @@ public class UserRegistration {
             /**
              * 3.Taking input from user and storing it in firstName
              */
-            System.out.println("Enter first name: ");
+            System.out.println("Please Enter first name: ");
             String firstName = bufferedReader.readLine();
             /**
              * 4.Printing Valid if given first name is valid , Invalid otherwise
@@ -63,7 +67,7 @@ public class UserRegistration {
             /**
              * 5.Taking input from user and storing it in lastName
              */
-            System.out.println("Enter last name: ");
+            System.out.println("Please Enter last name: ");
             String lastName = bufferedReader.readLine();
             /**
              * 6.Printing Valid if given last name is valid , Invalid otherwise
@@ -75,7 +79,7 @@ public class UserRegistration {
             /**
              * 7.Taking input from user and storing it in email
              */
-            System.out.println("Enter email: ");
+            System.out.println("Please Enter email: ");
             String email = bufferedReader.readLine();
             /**
              * 8.Printing Valid if given email is valid , Invalid otherwise
@@ -87,18 +91,30 @@ public class UserRegistration {
             /**
              * 9.Taking input from user and storing it in mobileNumber
              */
-            System.out.println("Enter Mobile Number: ");
+            System.out.println("Please Enter Mobile Number: ");
             String mobileNumber = bufferedReader.readLine();
             /**
              * 10.Printing Valid if given mobile number is valid , Invalid otherwise
              */
             System.out.println(userInputValidationUtil.isValidMobileNumber(mobileNumber) ? "Valid" : "InValid");
+
+
+            System.out.println("******* PASSWORD VALIDATION *******");
+            /**
+             *11.Taking input from user and storing it in password
+             */
+            System.out.println("Please Enter Password: ");
+            String password = bufferedReader.readLine();
+            /**
+             * 12.Printing Valid if given password is valid , Invalid otherwise
+             */
+            System.out.println(userInputValidationUtil.isValidPassword(password) ? "Valid" : "InValid");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
         try{
             /**
-             * 11.Closing the bufferedReader object
+             * 13.Closing the bufferedReader object
              */
             bufferedReader.close();
         }catch (IOException e){

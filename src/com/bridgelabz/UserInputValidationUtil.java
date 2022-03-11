@@ -10,6 +10,8 @@ import java.util.regex.Pattern;
  * Last name starts with Cap and has minimum 3 characters
  * User need to enter a valid email
  * User need to follow pre-defined mobile format
+ * User need to follow pre-defined password rules
+ * 1.minimum 8 characters
  */
 
 public class UserInputValidationUtil {
@@ -108,6 +110,32 @@ public class UserInputValidationUtil {
          * Checking fot the pattern match
          */
         Matcher matcher = pattern.matcher(mobileNumber);
+        /**
+         * Returns matches result
+         */
+        return matcher.matches();
+    }
+
+    /**
+     * Creating isValidPassword to validate the password given by user using regex
+     *
+     * @param password - Taking the input given by user
+     * @return - true or false
+     */
+    public static boolean isValidPassword(String password) {
+        System.out.println(password);
+        /**
+         * Declaring regex pattern to check the password
+         */
+        String passwordRegex = "^([A-Za-z0-9!@#$%^&*()_+?-]{8,})$";
+        /**
+         * Compiling the regex
+         */
+        Pattern pattern = Pattern.compile(passwordRegex);
+        /**
+         * Checking fot the pattern match
+         */
+        Matcher matcher = pattern.matcher(password);
         /**
          * Returns matches result
          */
