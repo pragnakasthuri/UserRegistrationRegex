@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
  * User need to follow pre-defined mobile format
  * User need to follow pre-defined password rules
  * 1.minimum 8 characters
+ * 2.Should have at least one upper case
  */
 
 public class UserInputValidationUtil {
@@ -40,6 +41,7 @@ public class UserInputValidationUtil {
         return matcher.matches();
     }
 
+
     /**
      * Creating isValidLastName to validate the last name given by user using regex
      *
@@ -64,6 +66,8 @@ public class UserInputValidationUtil {
          */
         return matcher.matches();
     }
+
+
     /**
      * Creating isValidEmail to validate the email given by user using regex
      *
@@ -91,6 +95,7 @@ public class UserInputValidationUtil {
         return matcher.matches();
     }
 
+
     /**
      * Creating isValidMobileNumber to validate the mobile format given by user using regex
      *
@@ -116,6 +121,7 @@ public class UserInputValidationUtil {
         return matcher.matches();
     }
 
+
     /**
      * Creating isValidPassword to validate the password given by user using regex
      *
@@ -127,7 +133,7 @@ public class UserInputValidationUtil {
         /**
          * Declaring regex pattern to check the password
          */
-        String passwordRegex = "^([A-Za-z0-9!@#$%^&*()_+?-]{8,})$";
+        String passwordRegex = "^(?=.*[A-Z]).{8,}$";
         /**
          * Compiling the regex
          */

@@ -3,7 +3,6 @@ package com.bridgelabz;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 /**
  * As a User need to enter a valid FirstName
@@ -14,6 +13,7 @@ import java.util.Scanner;
  * User need to follow pre-defined mobile format
  * User need to follow pre-defined password rules
  * 1.minimum 8 characters
+ * 2.Should have at least one upper case
  */
 
 public class UserRegistration {
@@ -112,6 +112,7 @@ public class UserRegistration {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
+        
         try{
             /**
              * 13.Closing the bufferedReader object
