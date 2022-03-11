@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
  * User need to follow pre-defined password rules
  * 1.minimum 8 characters
  * 2.Should have at least one upper case
+ * 3.Should have at least one numeric character
  */
 
 public class UserRegistration {
@@ -112,7 +113,7 @@ public class UserRegistration {
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        
+
         try{
             /**
              * 13.Closing the bufferedReader object
