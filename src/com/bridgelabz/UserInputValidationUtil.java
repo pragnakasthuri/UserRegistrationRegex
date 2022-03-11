@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
  * As a User need to enter a valid Lastname
  * Last name starts with Cap and has minimum 3 characters
  * User need to enter a valid email
+ * User need to follow pre-defined mobile format
  */
 
 public class UserInputValidationUtil {
@@ -22,7 +23,7 @@ public class UserInputValidationUtil {
         /**
          * Declaring regex pattern to check the firstName
          */
-        String firstNameRegex = "[A-Z]{1}[a-z]{2,}";
+        String firstNameRegex = "^[A-Z]{1}[a-z]{2,}$";
         /**
          * Compiling the regex
          */
@@ -47,11 +48,11 @@ public class UserInputValidationUtil {
         /**
          * Declaring regex pattern to check the lastName
          */
-        String firstNameRegex = "[A-Z]{1}[a-z]{2,}";
+        String lastNameRegex = "^[A-Z]{1}[a-z]{2,}$";
         /**
          * Compiling the regex
          */
-        Pattern pattern = Pattern.compile(firstNameRegex);
+        Pattern pattern = Pattern.compile(lastNameRegex);
         /**
          * Checking fot the pattern match
          */
@@ -71,17 +72,42 @@ public class UserInputValidationUtil {
         /**
          * Declaring regex pattern to check the email
          */
-        String firstNameRegex = "^[a-zA-Z0-9_+-]+(?:\\.[a-zA-Z0-9_+-]+)*@" +
+        String emailRegex = "^[a-zA-Z0-9_+-]+(?:\\.[a-zA-Z0-9_+-]+)*@" +
                                 "([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}" +
                                 "(?:(\\.([A-Za-z]{2})))?$";
         /**
          * Compiling the regex
          */
-        Pattern pattern = Pattern.compile(firstNameRegex);
+        Pattern pattern = Pattern.compile(emailRegex);
         /**
          * Checking fot the pattern match
          */
         Matcher matcher = pattern.matcher(email);
+        /**
+         * Returns matches result
+         */
+        return matcher.matches();
+    }
+
+    /**
+     * Creating isValidMobileNumber to validate the mobile format given by user using regex
+     *
+     * @param mobileNumber - Taking the input given by user
+     * @return - true or false
+     */
+    public static boolean isValidMobileNumber(String mobileNumber) {
+        /**
+         * Declaring regex pattern to check the mobile number
+         */
+        String mobileNumberRegex = "^[0-9]{2}[\\s][0-9]{10}$";
+        /**
+         * Compiling the regex
+         */
+        Pattern pattern = Pattern.compile(mobileNumberRegex);
+        /**
+         * Checking fot the pattern match
+         */
+        Matcher matcher = pattern.matcher(mobileNumber);
         /**
          * Returns matches result
          */
