@@ -15,6 +15,7 @@ import java.io.InputStreamReader;
  * 1.minimum 8 characters
  * 2.Should have at least one upper case
  * 3.Should have at least one numeric character
+ * 4.Has exactly one special character
  */
 
 public class UserRegistration {

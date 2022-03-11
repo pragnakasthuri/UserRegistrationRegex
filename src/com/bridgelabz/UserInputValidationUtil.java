@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
  * 1.minimum 8 characters
  * 2.Should have at least one upper case
  * 3.Should have at least one numeric character
+ * 4.Has exactly one special character
  */
 
 public class UserInputValidationUtil {
@@ -134,7 +135,8 @@ public class UserInputValidationUtil {
         /**
          * Declaring regex pattern to check the password
          */
-        String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+        String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*?_+=-]).{8,}$";
+
         /**
          * Compiling the regex
          */
