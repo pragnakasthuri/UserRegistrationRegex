@@ -127,7 +127,7 @@ public class UserInputValidationUtil {
         /**
          * Declaring regex pattern to check the password
          */
-        String passwordRegex = "^(.*){8,}$";
+        String passwordRegex = "^(.*).{8,}$";
         /**
          * Compiling the regex
          */
