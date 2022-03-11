@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
  * 2.Should have at least one upper case
  * 3.Should have at least one numeric character
  * 4.Has exactly one special character
- * Should clear all email samples provided separately
+ * Should clear all the email samples provided separately
  */
 
 public class UserRegistration {
