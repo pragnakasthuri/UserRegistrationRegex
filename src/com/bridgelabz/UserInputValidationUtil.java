@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
  * 2.Should have at least one upper case
  * 3.Should have at least one numeric character
  * 4.Has exactly one special character
+ * Should clear all email samples provided separately
  */
 
 public class UserInputValidationUtil {
@@ -24,7 +25,7 @@ public class UserInputValidationUtil {
      * @param firstName - Taking the input given by user
      * @return - true or false
      */
-    public static boolean isValidFirstName(String firstName) {
+    public boolean isValidFirstName(String firstName) {
         /**
          * Declaring regex pattern to check the firstName
          */
@@ -50,7 +51,7 @@ public class UserInputValidationUtil {
      * @param lastName - Taking the input given by user
      * @return - true or false
      */
-    public static boolean isValidLastName(String lastName) {
+    public boolean isValidLastName(String lastName) {
         /**
          * Declaring regex pattern to check the lastName
          */
@@ -76,7 +77,7 @@ public class UserInputValidationUtil {
      * @param email - Taking the input given by user
      * @return - true or false
      */
-    public static boolean isValidEmail(String email) {
+    public boolean isValidEmail(String email) {
         /**
          * Declaring regex pattern to check the email
          */
@@ -104,7 +105,7 @@ public class UserInputValidationUtil {
      * @param mobileNumber - Taking the input given by user
      * @return - true or false
      */
-    public static boolean isValidMobileNumber(String mobileNumber) {
+    public boolean isValidMobileNumber(String mobileNumber) {
         /**
          * Declaring regex pattern to check the mobile number
          */
@@ -130,8 +131,7 @@ public class UserInputValidationUtil {
      * @param password - Taking the input given by user
      * @return - true or false
      */
-    public static boolean isValidPassword(String password) {
-        System.out.println(password);
+    public boolean isValidPassword(String password) {
         /**
          * Declaring regex pattern to check the password
          */
