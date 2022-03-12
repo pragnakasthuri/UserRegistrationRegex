@@ -24,9 +24,7 @@ public class EmailPatternValidationUtil {
         /**
          * Regex to check first mandatory part i.e; abc, @, bridgelabz, ".", co and xyz and .in
          */
-        String emailRegex = "^[a-zA-Z0-9_+-]+(?:\\.[a-zA-Z0-9_+-]+)*@" +
-                            "([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}" +
-                            "(?:(\\.([A-Za-z]{2})))?$";
+        String emailRegex = "^[a-zA-Z-9]+([._+-]*[0-9A-Za-z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-z]{2})?$";
 
         /**
          * Compiling the ReGex
