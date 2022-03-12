@@ -64,6 +64,7 @@ public class EmailPattern {
         emailAddressList.add("abc@abc@gmail..com");
         emailAddressList.add("abc@gmail.com.1a");
         emailAddressList.add("ab33c@_bridgel4abz*gooogle");
+        emailAddressList.add("abc@gmail.com.aa.au");
 
         /**
          * 3.Creating an object for EmailPattern

@@ -81,9 +81,7 @@ public class UserInputValidationUtil {
         /**
          * Declaring regex pattern to check the email
          */
-        String emailRegex = "^[a-zA-Z0-9_+-]+(?:\\.[a-zA-Z0-9_+-]+)*@" +
-                                "([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}" +
-                                "(?:(\\.([A-Za-z]{2})))?$";
+        String emailRegex = "^[a-zA-Z-9]+([._+-]*[0-9A-Za-z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-z]{2})?$";
         /**
          * Compiling the regex
          */
@@ -135,7 +133,8 @@ public class UserInputValidationUtil {
         /**
          * Declaring regex pattern to check the password
          */
-        String passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*?_+=-]).{8,}$";
+        String passwordRegex = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]*" +
+                                "[\\@\\#\\^\\!\\$\\%\\&\\?][a-zA-Z0-9]*$";
 
         /**
          * Compiling the regex
