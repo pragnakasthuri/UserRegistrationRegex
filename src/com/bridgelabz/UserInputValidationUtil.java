@@ -81,7 +81,7 @@ public class UserInputValidationUtil {
         /**
          * Declaring regex pattern to check the email
          */
-        String emailRegex = "^[a-zA-Z-9]+([._+-]*[0-9A-Za-z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-z]{2})?$";
+        String emailRegex = "^[a-zA-Z-9]+([._+-]?[0-9A-Za-z]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-z]{2})?$";
         /**
          * Compiling the regex
          */
