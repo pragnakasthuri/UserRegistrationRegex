@@ -16,6 +16,7 @@ public class UserInputValidationTest {
     public void init() {
         validationUtil = new UserInputValidationUtil();
     }
+
     @Test
     public void givenFirstName_WhenProper_ShouldReturnTrue() {
         boolean result = validationUtil.isValidFirstName("Pragna");

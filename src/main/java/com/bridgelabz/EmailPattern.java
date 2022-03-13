@@ -42,7 +42,7 @@ public class EmailPattern {
         emailAddressList.add("abc.100@yahoo.com");
         emailAddressList.add("abc111@abc.com");
         emailAddressList.add("abc-100@abc.net");
-        emailAddressList.add("abc.100@abc.com.au");
+        emailAddressList.add("abc-100@abc.net");
         emailAddressList.add("abc@1.com");
         emailAddressList.add("abc@gmail.com.com");
         emailAddressList.add("abc.xyz@bridgelabz.co.in");
