@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import com.bridgelabz.exceptions.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,7 +29,6 @@ public class UserRegistration {
      * @param args - default java param
      */
     public static void main(String[] args) {
-
         /**
          * PROCEDURE:
          * 1.Creating UserInputValidationUtil object
@@ -63,7 +64,12 @@ public class UserRegistration {
             /**
              * 4.Printing Valid if given first name is valid , Invalid otherwise
              */
-            System.out.println(userInputValidationUtil.isValidFirstName(firstName) ? "Valid" : "InValid");
+
+            try {
+                System.out.println(userInputValidationUtil.isValidFirstName(firstName) ? "Valid" : "InValid");
+            } catch (InvalidFirstNameException e) {
+                System.out.println(e.getMessage());
+            }
 
 
             System.out.println("******* LASTNAME VALIDATION *******");
@@ -75,7 +81,11 @@ public class UserRegistration {
             /**
              * 6.Printing Valid if given last name is valid , Invalid otherwise
              */
-            System.out.println(userInputValidationUtil.isValidLastName(lastName) ? "Valid" : "InValid");
+            try {
+                System.out.println(userInputValidationUtil.isValidLastName(lastName) ? "Valid" : "InValid");
+            } catch (InvalidLastNameException e) {
+                System.out.println(e.getMessage());
+            }
 
 
             System.out.println("******* EMAIL VALIDATION *******");
@@ -87,7 +97,11 @@ public class UserRegistration {
             /**
              * 8.Printing Valid if given email is valid , Invalid otherwise
              */
-            System.out.println(userInputValidationUtil.isValidEmail(email) ? "Valid" : "InValid");
+            try {
+                System.out.println(userInputValidationUtil.isValidEmail(email) ? "Valid" : "InValid");
+            } catch (InvalidEmailException e) {
+                System.out.println(e.getMessage());
+            }
 
 
             System.out.println("******* MOBILE FORMAT VALIDATION *******");
@@ -99,7 +113,11 @@ public class UserRegistration {
             /**
              * 10.Printing Valid if given mobile number is valid , Invalid otherwise
              */
-            System.out.println(userInputValidationUtil.isValidMobileNumber(mobileNumber) ? "Valid" : "InValid");
+            try {
+                System.out.println(userInputValidationUtil.isValidMobileNumber(mobileNumber) ? "Valid" : "InValid");
+            } catch (InvalidMobileNumberException e) {
+                System.out.println(e.getMessage());
+            }
 
 
             System.out.println("******* PASSWORD VALIDATION *******");
@@ -111,7 +129,11 @@ public class UserRegistration {
             /**
              * 12.Printing Valid if given password is valid , Invalid otherwise
              */
-            System.out.println(userInputValidationUtil.isValidPassword(password) ? "Valid" : "InValid");
+            try {
+                System.out.println(userInputValidationUtil.isValidPassword(password) ? "Valid" : "InValid");
+            } catch (InvalidPasswordException e) {
+                System.out.println(e.getMessage());
+            }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
